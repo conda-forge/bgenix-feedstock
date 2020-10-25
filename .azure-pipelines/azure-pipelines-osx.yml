@@ -11,6 +11,9 @@ jobs:
       osx_64_boost1.63.0:
         CONFIG: osx_64_boost1.63.0
         UPLOAD_PACKAGES: 'True'
+      osx_64_boost1.65.0:
+        CONFIG: osx_64_boost1.65.0
+        UPLOAD_PACKAGES: 'True'
       osx_64_boost1.72.0:
         CONFIG: osx_64_boost1.72.0
         UPLOAD_PACKAGES: 'True'
