@@ -1,4 +1,4 @@
-{% set version = "1.1.4" %}
+{% set version = "1.1.5" %}
 
 package:
   name: bgenix
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/huntdatacenter/rbgen/releases/download/{{ version }}/bgen-{{ version }}.tar.bz2
-  sha256: c35c67e804ddb70a9bc0261ad8f02f32187b210c6dc3316312cab508c3bea7ce
+  sha256: 5e0dd68dc4ec9fd4282fbd3164c7c4aefb9870b6e2969dad304b7a69f7a75772
 
 build:
   skip: true  # [win]
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -23,6 +23,7 @@ requirements:
     - zlib
     - zstd
   host:
+    - boost {{ boost }}
     - boost-cpp {{ boost }}
     - sqlite
     - zlib
