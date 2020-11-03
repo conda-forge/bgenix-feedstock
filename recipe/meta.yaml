@@ -1,4 +1,4 @@
-{% set version = "1.1.6" %}
+{% set version = "1.1.4" %}
 
 package:
   name: bgenix
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/huntdatacenter/rbgen/releases/download/{{ version }}/bgen-{{ version }}.tar.bz2
-  sha256: 90ce9b5e8fae5bfb872268803944a24479ba146e902152317ad7d63a18955801
+  sha256: c35c67e804ddb70a9bc0261ad8f02f32187b210c6dc3316312cab508c3bea7ce
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 3
 
 requirements:
   build:
@@ -44,7 +44,17 @@ about:
   home: https://enkre.net/cgi-bin/code/bgen
   license: BSL-1.0
   license_file: LICENSE_1_0.txt
-  summary: Reference implementation of the BGEN format, written in C++
+  summary: 'Reference implementation of the BGEN format, written in C++.'
+  description: |
+    Reference implementation of the BGEN format, written in C++.
+    The library can be used as the basis for BGEN support
+    in other software, or as a reference for developers
+    writing their own implementations of the BGEN format.
+
+    Band, G. and Marchini, J., "BGEN: a binary file format for imputed genotype
+    and haplotype data", bioArxiv 308296; doi: https://doi.org/10.1101/308296
+  dev_url: https://enkre.net/cgi-bin/code/bgen
+  doc_url: https://enkre.net/cgi-bin/code/bgen/wcontent
 
 extra:
   recipe-maintainers:
