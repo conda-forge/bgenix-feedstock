@@ -1,4 +1,4 @@
-{% set version = "1.1.4" %}
+{% set version = "1.1.7" %}
 
 package:
   name: bgenix
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/huntdatacenter/rbgen/releases/download/{{ version }}/bgen-{{ version }}.tar.bz2
-  sha256: c35c67e804ddb70a9bc0261ad8f02f32187b210c6dc3316312cab508c3bea7ce
+  sha256: 9d1cac81142ed639cd928db92a2f860f82665b82ebf858bc3ad43c99faffd5f2
 
 build:
   skip: true  # [win]
-  number: 3
+  number: 0
 
 requirements:
   build:
@@ -52,7 +52,7 @@ about:
     writing their own implementations of the BGEN format.
 
     Band, G. and Marchini, J., "BGEN: a binary file format for imputed genotype
-    and haplotype data", bioArxiv 308296; doi: https://doi.org/10.1101/308296
+    and haplotype data", bioArxiv 308296; (doi: 10.1101/308296)
   dev_url: https://enkre.net/cgi-bin/code/bgen
   doc_url: https://enkre.net/cgi-bin/code/bgen/wcontent
 
