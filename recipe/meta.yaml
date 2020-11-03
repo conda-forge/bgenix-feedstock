@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/huntdatacenter/rbgen/releases/download/{{ version }}/bgen-{{ version }}.tar.bz2
-  sha256: af8ada5bad49cb67c47fb52203e7ad32f8c06b16cd02475f141c8920017280dd
+  sha256: 5e0dd68dc4ec9fd4282fbd3164c7c4aefb9870b6e2969dad304b7a69f7a75772
 
 build:
   skip: true  # [win]
