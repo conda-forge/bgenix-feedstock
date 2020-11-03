@@ -10,7 +10,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -23,7 +23,6 @@ requirements:
     - zlib
     - zstd
   host:
-    - boost {{ boost }}
     - boost-cpp {{ boost }}
     - sqlite
     - zlib
