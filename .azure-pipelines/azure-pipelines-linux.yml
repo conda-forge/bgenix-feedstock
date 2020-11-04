@@ -12,12 +12,24 @@ jobs:
         CONFIG: linux_64_boost1.63.0c_compiler_version7cxx_compiler_version7fortran_compiler_version7
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_boost1.63.0c_compiler_version7cxx_compiler_version7fortran_compiler_version9:
+        CONFIG: linux_64_boost1.63.0c_compiler_version7cxx_compiler_version7fortran_compiler_version9
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
       linux_64_boost1.65.0c_compiler_version7cxx_compiler_version7fortran_compiler_version7:
         CONFIG: linux_64_boost1.65.0c_compiler_version7cxx_compiler_version7fortran_compiler_version7
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_boost1.65.0c_compiler_version7cxx_compiler_version7fortran_compiler_version9:
+        CONFIG: linux_64_boost1.65.0c_compiler_version7cxx_compiler_version7fortran_compiler_version9
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
       linux_64_boost1.70.0c_compiler_version7cxx_compiler_version7fortran_compiler_version7:
         CONFIG: linux_64_boost1.70.0c_compiler_version7cxx_compiler_version7fortran_compiler_version7
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_boost1.70.0c_compiler_version7cxx_compiler_version7fortran_compiler_version9:
+        CONFIG: linux_64_boost1.70.0c_compiler_version7cxx_compiler_version7fortran_compiler_version9
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
       linux_64_boost1.72.0c_compiler_version7cxx_compiler_version7fortran_compiler_version7:
