@@ -2,7 +2,7 @@
 
 package:
   name: bgenix
-  version: "{{ version|replace("-", "_") }}"
+  version: "{{ version|replace('-', '_') }}"
 
 source:
   url: https://github.com/huntdatacenter/rbgen/releases/download/{{ version }}/bgen-{{ version }}.tar.bz2
@@ -10,7 +10,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 4
+  number: 5
 
 requirements:
   build:
