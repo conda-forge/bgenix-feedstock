@@ -16,7 +16,6 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}
   host:
     - boost {{ boost }}
     - boost-cpp {{ boost }}
