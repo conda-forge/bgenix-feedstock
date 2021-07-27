@@ -11,14 +11,11 @@ jobs:
       osx_64_:
         CONFIG: osx_64_
         UPLOAD_PACKAGES: 'True'
-      osx_64_boost170:
-        CONFIG: osx_64_boost1.70
-        UPLOAD_PACKAGES: 'True'
       osx_64_boost172:
         CONFIG: osx_64_boost1.72
         UPLOAD_PACKAGES: 'True'
-      osx_64_boost174:
-        CONFIG: osx_64_boost1.74
+      osx_64_boost176:
+        CONFIG: osx_64_boost1.76
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
