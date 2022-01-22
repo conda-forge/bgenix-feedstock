@@ -1,16 +1,17 @@
 {% set version = "1.1.4" %}
+{% set patch = "1" %}
 
 package:
   name: bgenix
   version: "{{ version|replace('-', '_') }}"
 
 source:
-  url: https://github.com/huntdatacenter/rbgen/releases/download/{{ version }}/bgen-{{ version }}.tar.bz2
-  sha256: c35c67e804ddb70a9bc0261ad8f02f32187b210c6dc3316312cab508c3bea7ce
+  url: https://github.com/huntdatacenter/rbgen/archive/refs/tags/{{ version }}.{{ patch }}.tar.gz
+  sha256: 49c2a0fe738ca0dfe03bf93152c7ab39d99f225e889a4187d96d47884cf75026
 
 build:
   skip: true  # [win]
-  number: 7
+  number: 8
 
 requirements:
   build:
