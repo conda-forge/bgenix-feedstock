@@ -10,20 +10,19 @@ source:
 
 build:
   skip: true  # [win]
-  number: 4
+  number: 5
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - boost {{ boost }}
-    - boost-cpp {{ boost }}
+    - libboost-python-devel {{ boost }}
+    - libboost-devel
     - sqlite
     - zlib
     - zstd
   run:
-    - boost-cpp {{ boost }}
 
 test:
   source_files:
