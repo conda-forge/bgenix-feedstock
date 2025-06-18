@@ -10,20 +10,25 @@ source:
 
 build:
   skip: true  # [win]
-  number: 4
+  number: 5
+  run_exports:
+    - {{ pin_subpackage('bgenix', max_pin="x.x") }}
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - boost {{ boost }}
-    - boost-cpp {{ boost }}
+    - boost {{ boost }}        # [x86_64]
+    - boost-cpp {{ boost }}    # [x86_64]
+    - boost-cpp >=1.72.0       # [linux and aarch64]
+    - python                   # [linux and aarch64]
     - sqlite
     - zlib
     - zstd
   run:
-    - boost-cpp {{ boost }}
+    - boost-cpp {{ boost }}    # [x86_64]
+    - boost-cpp >=1.72.0       # [linux and aarch64]
 
 test:
   source_files:
@@ -51,3 +56,5 @@ about:
 extra:
   recipe-maintainers:
     - matuskosut
+  additional-platforms:
+    - linux-aarch64
