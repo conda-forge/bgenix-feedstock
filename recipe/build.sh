@@ -6,4 +6,6 @@
       --libdir=${PREFIX}/lib \
       --jobs=${CPU_COUNT} \
       CFLAGS="${CFLAGS} -I${PREFIX}/include -I${PREFIX}/include/boost" \
+      CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include -I${PREFIX}/include/boost" \
       LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
+

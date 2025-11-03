@@ -7,7 +7,10 @@ package:
 source:
   url: https://github.com/huntdatacenter/rbgen/releases/download/{{ version }}/bgen-{{ version }}.tar.bz2
   sha256: 9d1cac81142ed639cd928db92a2f860f82665b82ebf858bc3ad43c99faffd5f2
-
+  patches:
+    - streampos.patch
+    - wscript.patch
+    
 build:
   skip: true  # [win]
   number: 5
@@ -16,14 +19,14 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
   host:
-    - boost {{ boost }}
-    - boost-cpp {{ boost }}
+    - libboost-python-devel
+    - libboost-devel
     - sqlite
     - zlib
     - zstd
   run:
-    - boost-cpp {{ boost }}
 
 test:
   source_files:
@@ -51,3 +54,4 @@ about:
 extra:
   recipe-maintainers:
     - matuskosut
+    - dslarm

@@ -1,0 +1,11 @@
+--- a/bgen-1.1.7/wscript	2025-10-23 23:22:12.852155183 +0100
++++ b/bgen-1.1.7/wscript	2020-10-30 13:05:59.000000000 +0000
+@@ -22,7 +22,7 @@
+     cfg.load('compiler_cxx')
+     cfg.env.CXXFLAGS = [
+         '-Wall', '-pedantic', '-Wno-unused-local-typedefs',  # '-Wno-c++11-long-long',
+-        '-Wno-deprecated-declarations', '-Wno-long-long', '-fPIC']
++        '-Wno-deprecated-declarations', '-Wno-long-long', '-fPIC', '-std=c++11']
+     cfg.env.CFLAGS = [
+         '-Wall', '-pedantic', '-Wno-unused-local-typedefs',  # '-Wno-c++11-long-long',
+         'Wno-deprecated-declarations', '-Wno-long-long', '-fPIC']
