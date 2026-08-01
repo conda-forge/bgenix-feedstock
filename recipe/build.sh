@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -o xtrace -o nounset -o pipefail -o errexit
 
 ./waf configure build install \
       --prefix=${PREFIX} \
@@ -8,4 +10,3 @@
       CFLAGS="${CFLAGS} -I${PREFIX}/include -I${PREFIX}/include/boost" \
       CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include -I${PREFIX}/include/boost" \
       LDFLAGS="${LDFLAGS} -L${PREFIX}/lib"
-

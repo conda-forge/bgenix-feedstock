@@ -1,0 +1,61 @@
+schema_version: 1
+
+context:
+  version: "1.1.7"
+
+package:
+  name: bgenix
+  version: ${{ version }}
+
+source:
+  url: https://github.com/huntdatacenter/rbgen/releases/download/${{ version }}/bgen-${{ version }}.tar.bz2
+  sha256: 9d1cac81142ed639cd928db92a2f860f82665b82ebf858bc3ad43c99faffd5f2
+  patches:
+    - streampos.patch
+    - wscript.patch
+
+build:
+  number: 7
+  skip: win
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib('c') }}
+  host:
+    - libboost-python-devel
+    - libboost-devel
+    - sqlite
+    - zlib
+    - zstd
+
+tests:
+  - files:
+      source:
+        - example/example.15bits.bgen
+        - example/example.16bits.bgen
+        - example/example.16bits.bgen.bgi
+    script:
+      - bgenix -help
+      - bgenix -g example/example.16bits.bgen >/dev/null
+      - bgenix -g example/example.15bits.bgen -index
+
+about:
+  license: BSL-1.0
+  license_file: LICENSE_1_0.txt
+  summary: Reference implementation of the BGEN format, written in C++.
+  description: |
+    Reference implementation of the BGEN format, written in C++.
+    The library can be used as the basis for BGEN support
+    in other software, or as a reference for developers
+    writing their own implementations of the BGEN format.
+  homepage: https://enkre.net/cgi-bin/code/bgen
+  repository: https://enkre.net/cgi-bin/code/bgen
+  documentation: https://enkre.net/cgi-bin/code/bgen/wcontent
+
+extra:
+  recipe-maintainers:
+    - danielnachun
+    - matuskosut
+    - dslarm
